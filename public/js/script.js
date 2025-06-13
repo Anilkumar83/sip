@@ -1,4 +1,4 @@
-const ws = new WebSocket('ws://localhost:3000');
+const ws = new WebSocket('wss://sip-q14a.onrender.com');
 
 let products = [];
 let expiringProducts = [];
