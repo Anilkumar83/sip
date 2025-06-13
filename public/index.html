@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshVault - Product Management</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>FreshVault</h1>
+    <p>Manage your products with elegance</p>
+    <a href="scanner-input.html" class="scanner-link">Go to Scanner</a>
+  </header>
+
+  <main>
+    <section class="manual-entry">
+      <h2>Add Product Manually</h2>
+      <form id="product-form">
+        <input type="number" id="product-id" placeholder="Product ID" required>
+        <input type="text" id="product-name" placeholder="Product Name" required>
+        <input type="date" id="product-expiry" required>
+        <input type="date" id="product-manufacture" required>
+        <input type="text" id="product-protein" placeholder="Protein (e.g., 2g)">
+        <input type="text" id="product-vitamins" placeholder="Vitamins">
+        <input type="text" id="product-weight" placeholder="Weight (e.g., 100g)">
+        <input type="text" id="product-category" placeholder="Category">
+        <input type="number" id="product-price" placeholder="Price" step="0.01" required>
+        <input type="text" id="product-ingredients" placeholder="Ingredients">
+        <input type="text" id="product-description" placeholder="Description">
+        <button type="submit">Add Product</button>
+      </form>
+    </section>
+
+    <section class="product-list">
+      <h2>All Products</h2>
+      <div id="product-list"></div>
+    </section>
+
+    <section class="expiring-products">
+      <h2>Expiring Soon (<span id="expiring-count">0</span>)</h2>
+      <div id="expiring-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 FreshVault. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal for product details -->
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">×</span>
+      <h2 id="modal-product-name"></h2>
+      <p><strong>ID:</strong> <span id="modal-product-id"></span></p>
+      <p><strong>Expiry Date:</strong> <span id="modal-product-expiry"></span></p>
+      <p><strong>Manufacturing Date:</strong> <span id="modal-product-manufacture"></span></p>
+      <p><strong>Protein:</strong> <span id="modal-product-protein"></span></p>
+      <p><strong>Vitamins:</strong> <span id="modal-product-vitamins"></span></p>
+      <p><strong>Weight:</strong> <span id="modal-product-weight"></span></p>
+      <p><strong>Category:</strong> <span id="modal-product-category"></span></p>
+      <p><strong>Price:</strong> $<span id="modal-product-price"></span></p>
+      <p><strong>Ingredients:</strong> <span id="modal-product-ingredients"></span></p>
+      <p><strong>Description:</strong> <span id="modal-product-description"></span></p>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
